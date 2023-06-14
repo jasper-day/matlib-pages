@@ -3,7 +3,6 @@ route: /random
 redirect: true
 filters:
   category:
-    - blog
     - item
     - material
     - process
