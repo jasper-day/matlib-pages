@@ -5,6 +5,7 @@ material_type:
 taxonomy:
     tag:
         - worn
+media_order: safety_glasses.jpg
 ---
 
 Safety glasses protect the eyesight of thousands of scientists, hobbyists, and technicians every day. They must be made of a material that is exceptionally clear, impact-resistant, and durable. 
