@@ -34,7 +34,7 @@ pages:
   type: regular
   dirs:
     - 'page://'
-  theme: antimatter
+  theme: quark
   order:
     by: default
     dir: asc
