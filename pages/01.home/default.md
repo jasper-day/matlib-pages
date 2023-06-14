@@ -13,6 +13,6 @@ Currently in progress.
  	- [x] The item page should allow you to select from a list of created materials, the material page should allow you to select from a list of processes, etc
 - [ ] Bring in JSmol library and asset stream to embed JSmol
 - [ ] Figure out 3D viewer
-- [ ]  
+- [ ] Theming and Scheming
 
 ## Hello from the Git repo!
