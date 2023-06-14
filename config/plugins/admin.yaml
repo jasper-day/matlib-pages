@@ -99,3 +99,15 @@ pagemedia:
   res_max_width: 0
   res_max_height: 0
   resize_quality: 0.8
+hide_page_types:
+  - error
+  - external
+  - flex-objects
+  - item
+  - modular
+  - root
+  - simplesearch_results
+hide_modular_page_types:
+  - modular/features
+  - modular/showcase
+  - modular/text
