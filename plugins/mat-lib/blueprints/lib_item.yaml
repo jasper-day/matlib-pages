@@ -1,0 +1,23 @@
+extends@: default
+title: lib_item
+
+form: 
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          fields:
+            taxonomies:
+              fields:
+                header.material_type:
+                  label: Materials used in this item
+                  type: pages
+                  size: medium
+                  start_route: '/materials'
+                  multiple: true
+                  validate:
+                    type: array
+                  selectize: true

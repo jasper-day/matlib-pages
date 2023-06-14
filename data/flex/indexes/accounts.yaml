@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1686303019
+count: 1
+index:
+  admin:
+    storage_key: admin
+    storage_timestamp: 1686303019
+    key: admin
+    email: jromanoday@gmail.com

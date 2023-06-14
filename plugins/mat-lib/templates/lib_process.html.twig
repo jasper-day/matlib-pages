@@ -1,0 +1,38 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% if page.header.title %}
+    <h2>{{page.header.title|e }}</h2>
+    {% endif %}
+
+    {{ page.content|raw }}
+
+    {% set itemType = page.header.item_type|e %}
+    {% if itemType %}
+    <h3>Items made with this material </h3>
+    <ul>
+        {% for link in itemType %}
+            {% set referencePage = grav.page.find(link) %}
+            {% if referencePage %}
+                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+    {% set processType = page.header.processes|e %}
+    {% if processType %}
+    <h3>Processes used on this material</h3>
+    <ul>
+        {% for link in processType %}
+            {% set referencePage = grav.page.find(link) %}
+            {% if referencePage %}
+                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+{% endblock %}

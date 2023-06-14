@@ -1,0 +1,35 @@
+enabled: true
+folders:
+  - pages
+  - themes
+  - plugins
+  - config
+  - data
+SyncNotice: null
+sync:
+  on_save: true
+  on_delete: true
+  on_media: true
+  cron_enable: false
+  cron_at: '0 12,23 * * *'
+local_repository: null
+repository: 'https://github.com/jasper-day/matlib-pages.git'
+no_user: '0'
+user: jasper-day
+password: gitsync-def5020043a3ca6a3e294544a80c54970d89b4aa1067cb1e2125caa9b691de62028591017301f4abf11c3e16b08651c656e7c7f5dd70e9efbc6f2f8f208e54959f0540d6996db2a7ec48f92e6342ac6904ccc3f7314a053c7162ac03daf76458402cf45f2bb044c4d57b950797eeaff3a002b2af2e3b45880005f58e
+webhook: /_git-sync-259db9cbaf9f
+webhook_enabled: '0'
+webhook_secret: eceb6143879c780c4b1ed360fcb673819b3f87b7af7826f0
+branch: main
+remote:
+  name: origin
+  branch: main
+git:
+  author: gituser
+  message: '(Grav GitSync) Automatic Commit'
+  name: GitSync
+  email: git-sync@trilby.media
+  bin: git
+  ignore: null
+  private_key: null
+logging: false
