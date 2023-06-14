@@ -7,18 +7,6 @@
 
     {{ page.content|raw }}
 
-    {% set itemType = page.header.item_type|e %}
-    {% if itemType %}
-    <h3>Items made with this material </h3>
-    <ul>
-        {% for link in itemType %}
-            {% set referencePage = grav.page.find(link) %}
-            {% if referencePage %}
-                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-    {% endif %}
 
     <h3>Library items made with this material</h3>
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
