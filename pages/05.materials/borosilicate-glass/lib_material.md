@@ -1,6 +1,6 @@
 ---
 title: 'Borosilicate Glass'
-material_type: metal
+material_type: polymer
 processes:
     - /processes/blow-molding
 ---
