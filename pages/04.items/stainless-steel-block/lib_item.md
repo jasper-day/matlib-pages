@@ -1,6 +1,7 @@
 ---
 title: 'Stainless Steel Block'
 taxonomy:
+    category: item
     tag:
         - block
 material_type:
