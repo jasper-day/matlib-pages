@@ -6,33 +6,17 @@
     {% endif %}
 
     {{ page.content|raw }}
-
-    {% set itemType = page.header.item_type|e %}
-    {% if itemType %}
-    <h3>Items made with this material </h3>
+    
+    <h3>Library materials formed with this process</h3>
+    {% set process_materials = page.collection({'items': {'@page.children': '/materials'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
     <ul>
-        {% for link in itemType %}
-            {% set referencePage = grav.page.find(link) %}
-            {% if referencePage %}
-                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
-            {% endif %}
-        {% endfor %}
+    {% for i in process_materials %}
+        {% if page.route in  i.header.processes %}
+        <li>
+        <a href="{{ i.url|e }}">{{ i.header.title|e }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
     </ul>
-    {% endif %}
-
-
-    {% set processType = page.header.processes|e %}
-    {% if processType %}
-    <h3>Processes used on this material</h3>
-    <ul>
-        {% for link in processType %}
-            {% set referencePage = grav.page.find(link) %}
-            {% if referencePage %}
-                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-    {% endif %}
-
 
 {% endblock %}
