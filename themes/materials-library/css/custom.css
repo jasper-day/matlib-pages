@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
 .bricklayer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -55,13 +58,13 @@
 }
 
 #header .navbar-text-mat {
-    font-family: "nulshock bd";
+    font-family: "Righteous", cursive;
     font-size: 2rem;
     color: #5f8dd3;
 }
 
 #header .navbar-text-lib {
-    font-family: "nulshock bd";
+    font-family: "Righteous", cursive;
     font-size: 2rem;
     color: #bc5fd3;
 }
