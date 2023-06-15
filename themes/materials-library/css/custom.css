@@ -67,3 +67,7 @@
     font-size: 2rem;
     color: #bc5fd3;
 }
+
+#header .navbar-logo-text {
+    display: flex;
+}
