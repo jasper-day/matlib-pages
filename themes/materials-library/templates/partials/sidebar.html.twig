@@ -18,21 +18,18 @@
 	<a class="button" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> {{ 'THEME_QUARK.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
 </div>
 {% endif %}
-{% if config.plugins.matlib-randomize.enabled %}
 <div class = "sidebar-content">
 	<h4>Random Item</h4>
-    <a class="button" href="{{ base_url }}/random-item"><i class="fa fa-retweet"></i>{{ 'THEME_QUARK.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY' }}</a>
+    <a class="button" href="{{ base_url }}/random-item"><i class="fa fa-retweet"></i>I'm feeling lucky!</a>
 </div>
 <div class = "sidebar-content">
 	<h4>Random Material</h4>
-    <a class="button" href="{{ base_url }}/random-material"><i class="fa fa-retweet"></i>{{ 'THEME_QUARK.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY' }}</a>
+    <a class="button" href="{{ base_url }}/random-material"><i class="fa fa-retweet"></i>I'm feeling luckier!</a>
 </div>
 <div class = "sidebar-content">
 	<h4>Random Process</h4>
-    <a class="button" href="{{ base_url }}/random-process"><i class="fa fa-retweet"></i>{{ 'THEME_QUARK.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY' }}</a>
+    <a class="button" href="{{ base_url }}/random-process"><i class="fa fa-retweet"></i>I'm feeling luckiest!</a>
 </div>
-    
-{% endif%}
 {{ page.find('/modules/sidebar').content|raw }}
 
 {% if config.plugins.taxonomylist.enabled %}
