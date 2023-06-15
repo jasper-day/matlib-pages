@@ -34,7 +34,7 @@ pages:
   type: regular
   dirs:
     - 'page://'
-  theme: quark
+  theme: mat-lib
   order:
     by: default
     dir: asc
