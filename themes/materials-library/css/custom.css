@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 .bricklayer-column-sizer {
-    width: 100%;
-    display: none;
+    width: 50%;
 }
 
 @media screen and (min-width: 640px) {
     .bricklayer-column-sizer {
-        width: 50%;
+        width: 33.333%;
     }
 }
 
 @media screen and (min-width: 980px) {
     .bricklayer-column-sizer {
-        width: 33.3333%;
+        width: 25%;
     }
+}
+
+.container.grid-lg {
+    max-width: 80vw;
 }
 
 /* mobile tree menu fix */
@@ -40,6 +43,19 @@
 #header .navbar-logo-text {
     margin: auto 0;
 }
+
+@media screen and (max-width: 768px) {
+    #header .navbar-text-mat {
+        display: none;
+    }
+
+    #header .navbar-text-lib {
+        display: none;
+    }
+}
+    
+}
+
 
 /* Card fix */
 
