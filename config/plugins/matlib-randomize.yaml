@@ -1,0 +1,12 @@
+enabled: true
+active: true
+redirect: false
+route_item:
+  url: /random-item
+  route: /items
+route_material:
+  url: /random-material
+  route: /materials
+route_process:
+  url: /random-process
+  route: /processes
