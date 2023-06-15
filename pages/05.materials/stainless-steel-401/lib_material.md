@@ -5,6 +5,7 @@ item_type:
     - /items/stainless-steel-block
 processes:
     - /processes/cold-rolling
+    - /processes/hot-rolling
 material_type: metal
 ---
 
