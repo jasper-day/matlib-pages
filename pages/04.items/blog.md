@@ -6,5 +6,7 @@ content:
         dir: desc
     limit: 25
     pagination: true
+title: Items
 ---
 
+Items in the library.
