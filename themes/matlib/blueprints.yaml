@@ -1,0 +1,18 @@
+name: Matlib
+slug: matlib
+type: theme
+version: 0.1.0
+description: Theme for the Materials Library
+icon: rebel
+author:
+  name: Jasper Day
+  email: jromanoday@gmail.com
+homepage: https://github.com/jasper-day/grav-theme-matlib
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/jasper-day/grav-theme-matlib/issues
+readme: https://github.com/jasper-day/grav-theme-matlib/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }

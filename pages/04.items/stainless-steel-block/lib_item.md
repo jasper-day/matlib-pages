@@ -1,7 +1,6 @@
 ---
-title: 'Stainless Steel Block'
+title: 'Stainless Steel Bar.'
 taxonomy:
-    category: item
     tag:
         - block
 material_type:
@@ -9,4 +8,4 @@ material_type:
 media_order: Stainless-Round-bar-scaled.jpg
 ---
 
-The stainless steel block is a solid bar of stainless steel weighing 1 kilogram. It was used for the reaction wheels in Starscouts.
+The stainless steel bar is a solid bar of stainless steel weighing 1 kilogram. Round bar is often [hot-rolled](/processes/hot-rolling) or [cold-rolled](/processes/cold-rolling) to give its final shape.
