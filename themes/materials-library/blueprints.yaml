@@ -31,3 +31,4 @@ form:
       description: Will be used instead of default logo `theme://images/grav-logo.svg`
       accept:
         - image/*
+        - .svg
