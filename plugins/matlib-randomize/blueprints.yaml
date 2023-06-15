@@ -30,7 +30,53 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    text_var:
+
+    route_item.url:
       type: text
-      label: PLUGIN_MATLIB_RANDOMIZE.TEXT_VARIABLE
-      help: PLUGIN_MATLIB_RANDOMIZE.TEXT_VARIABLE_HELP
+      size: medium
+      label: Route
+      default: /random_item
+      help: Default route for random *item*
+    route_material.url:
+      type: text
+      size: medium
+      label: Route
+      default: /random_material
+      help: Default route for random *material*
+    route_process.url:
+      type: text
+      size: medium
+      label: Route
+      default: /random_process
+      help: Default route for random *process*
+
+    route_item.route:
+      type: text
+      size: medium
+      label: Route
+      default: /items
+      help: Directory to pick random item from
+    route_material.route:
+      type: text
+      size: medium
+      label: Route
+      default: /materials
+      help: Directory to pick random material from
+    route_process.route:
+      type: text
+      size: medium
+      label: Route
+      default: /processes
+      help: Directory to pick random process from
+
+
+    redirect:
+      type: toggle
+      label: Redirect
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

@@ -3,6 +3,9 @@ namespace Grav\Plugin;
 
 use Composer\Autoload\ClassLoader;
 use Grav\Common\Plugin;
+use Grav\Common\Page\Collection;
+use Grav\Common\Uri;
+use Grav\Common\Page\Pages;
 
 /**
  * Class MatlibRandomizePlugin
@@ -44,16 +47,78 @@ class MatlibRandomizePlugin extends Plugin
     /**
      * Initialize the plugin
      */
-    public function onPluginsInitialized(): void
+    public function onPluginsInitialized()
     {
-        // Don't proceed if we are in the admin plugin
         if ($this->isAdmin()) {
+            $this->active = false;
             return;
         }
 
-        // Enable the main events we are interested in
-        $this->enable([
-            // Put your main events here
-        ]);
+        /** @var Uri $uri */
+        $uri = $this->grav['uri'];
+        $route_item = $this->config->get('plugins.matlib-randomize.route_item.url');
+        $route_material = $this->config->get('plugins.matlib-randomize.route_material.url');
+        $route_process = $this->config->get('plugins.matlib-randomize.route_process.url');
+
+        $routes = [$route_item, $route_material, $route_process];
+
+        if (count($routes) && $uri->path() in $routes) {
+            $this->enable([
+                'onPageInitialized' => ['onPageInitialized', 0]
+            ]);
+        }
+    }
+    
+    /**
+     * Display random page.
+     */
+    public function onPageInitialized()
+    {
+        // /** @var Taxonomy $taxonomy_map */
+        // $taxonomy_map = $this->grav['taxonomy'];
+
+        // $filters = (array) $this->config->get('plugins.random.filters');
+        // $operator = $this->config->get('plugins.random.filter_combinator', 'and');
+
+        switch($this->grav['uri'])
+        {
+            case $this->config->get('plugins.matlib-randomize.route_item.url'):
+                $route = $this->config->get('plugins.matlib-randomize.route_item.route');
+                randomPage($route);
+                break;
+            case $this->config->get('plugins.matlib-randomize.route_material.url'):
+                $route = $this->config->get('plugins.matlib-randomize.route_material.route');
+                randomPage($route);
+                break;
+            case $this->config->get('plugins.matlib-randomize.route_process.url'):
+                $route = $this->config->get('plugins.matlib-randomize.route_process.route');
+                randomPage($route);
+                break;
+            default:
+                break;
+        }
+    
+        private function randomPage($route)
+        {
+            $collection = $this->grav['pages']->children($route);
+            if (count($collection)) {
+                unset($this->grav['page']);
+                $page = $collection->random()->current();
+
+                if ($this->config->get('plugins.matlib-randomize.redirect', true)) {
+                    $this->grav->redirect($page->url(true));
+                } else {
+                    // override the modified time
+                    $page->modified(time());
+                    $this->grav['page'] = $page;
+
+                    // Convince the URI object that it is this random page...
+                    $uri = $this->grav['uri'];
+                    $uri->url = $uri->base().$page->url();
+                    $uri->init();
+                }
+            }
+
+        }
     }
 }

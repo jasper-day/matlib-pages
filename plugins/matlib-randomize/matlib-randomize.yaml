@@ -1,2 +1,12 @@
 enabled: true
-text_var: Custom Text added by the **Matlib Randomize** plugin (disable plugin to remove)
+active: true
+redirect: true
+route_item: 
+  url: /random-item
+  route: /items
+route_material: 
+  url: /random-material
+  route: /materials
+route_process: 
+  url: /random-process
+  route: /processes
