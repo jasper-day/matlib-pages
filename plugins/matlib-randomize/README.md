@@ -44,11 +44,11 @@ Note that if you use the Admin Plugin, a file with your configuration named matl
 
 ## Usage
 
-**Describe how to use the plugin.**
+Simply set the url you want to redirect from, and the folder whose children you would like to select randomly within.
 
 ## Credits
 
-**Did you incorporate third-party code? Want to thank somebody?**
+Heavily inspired by the (almost) equivalent Random plugin.
 
 ## To Do
 
