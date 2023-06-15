@@ -1,0 +1,11 @@
+enabled: true
+production-mode: true
+grid-size: grid-sm
+header-fixed: true
+header-animated: false
+header-dark: false
+header-transparent: false
+sticky-footer: true
+spectre:
+  exp: false
+  icons: false
