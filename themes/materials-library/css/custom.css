@@ -53,3 +53,17 @@
 .treemenu li {
     padding: 15px 5px;
 }
+
+#header .logo {
+    height:50px
+}
+
+#header .navbar-text-mat {
+    font-size: 2rem;
+    color: #5f8dd3;
+}
+
+#header .navbar-text-lib {
+    font-size: 2rem;
+    color: #bc5fd3;
+}
