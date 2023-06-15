@@ -34,7 +34,7 @@ pages:
   type: regular
   dirs:
     - 'page://'
-  theme: materials-library
+  theme: quark
   order:
     by: default
     dir: asc
