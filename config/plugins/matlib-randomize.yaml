@@ -1,6 +1,6 @@
 enabled: true
 active: true
-redirect: false
+redirect: true
 route_item:
   url: /random-item
   route: /items

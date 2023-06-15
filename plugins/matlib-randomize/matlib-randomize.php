@@ -5,7 +5,7 @@ use Composer\Autoload\ClassLoader;
 use Grav\Common\Plugin;
 use Grav\Common\Page\Collection;
 use Grav\Common\Uri;
-use Grav\Common\Page\Pages;
+use Grav\Common\Page\Page;
 
 /**
  * Class MatlibRandomizePlugin
@@ -107,8 +107,13 @@ class MatlibRandomizePlugin extends Plugin
     protected function redirectToRandomPage($route)
     {
 	    $this->grav['log']->notice("Finding random page in category {$route}");
-	    $collection = new Collection(['@page.children', $route]);
-	    if (count($collection)) {
+	    $page = new Page();
+	    $collection = $page->evaluate(['@page.children' => $route]);
+	    //$collection = new Collection(['@page.children' => $route]);
+	    $collection_debug = $collection->toExtendedArray();
+	    $this->grav['log']->notice($collection_debug);
+
+	    if (count($collection->toExtendedArray()) > 1) {
 		    $this->grav['log']->notice("Collection successfully initialized");
 		    unset($this->grav['page']);
 		    $page = $collection->random()->current();
@@ -125,6 +130,8 @@ class MatlibRandomizePlugin extends Plugin
 			    $uri->url = $uri->base().$page->url();
 			    $uri->init();
 		    }
+	    } else {
+		    $this->grav['log']->error("Collection returned null");
 	    }
 
     }
