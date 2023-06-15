@@ -1,0 +1,29 @@
+{
+  "name": "jasper-day/matlib-randomize",
+  "type": "grav-plugin",
+  "description": "Random materials, items, and processes for the MatLib library",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/jasper-day/grav-plugin-matlib-randomize",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jasper Day",
+      "email": "jromanoday@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\MatlibRandomize\\": "classes/"
+    },
+    "classmap":  ["matlib-randomize.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.3"
+    }
+  }
+}
