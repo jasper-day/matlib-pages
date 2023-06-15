@@ -1,0 +1,10 @@
+// Cards (library items)
+.card {
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  .card-body {
+    height: 100px;
+    overflow: hidden;
+  }
+}
