@@ -1,3 +1,9 @@
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '': ['user://themes/materials-library', 'user://themes/quark']
 enabled: true
 production-mode: true
 grid-size: grid-lg
@@ -9,3 +15,9 @@ sticky-footer: true
 spectre:
   exp: false
   icons: false
+custom_logo:
+  user/themes/materials-library/images/logo/matlib-logo.svg:
+    name: matlib-logo.svg
+    type: image/svg+xml
+    size: 3172
+    path: user/themes/materials-library/images/logo/matlib-logo.svg
