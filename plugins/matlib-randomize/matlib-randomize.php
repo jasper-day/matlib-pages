@@ -54,15 +54,18 @@ class MatlibRandomizePlugin extends Plugin
             return;
         }
 
-        /** @var Uri $uri */
-        $uri = $this->grav['uri'];
+        $path = $this->grav['uri']->path();
+	$this->grav['log']->notice("Random URI initialized: {$uri}");
         $route_item = $this->config->get('plugins.matlib-randomize.route_item.url');
         $route_material = $this->config->get('plugins.matlib-randomize.route_material.url');
         $route_process = $this->config->get('plugins.matlib-randomize.route_process.url');
 
-        $routes = [$route_item, $route_material, $route_process];
+	$routes = [$route_item, $route_material, $route_process];
 
-        if (count($routes) && in_array($this->grav['uri'], $routes)) {
+	$will_redirect = count($routes) && in_array($path, $routes);
+
+	$this->grav['log']->notice("Current path in options? {$will_redirect}");
+        if ($will_redirect) {
             $this->enable([
                 'onPageInitialized' => ['onPageInitialized', 0]
             ]);
@@ -76,49 +79,52 @@ class MatlibRandomizePlugin extends Plugin
     {
         // /** @var Taxonomy $taxonomy_map */
         // $taxonomy_map = $this->grav['taxonomy'];
-
         // $filters = (array) $this->config->get('plugins.random.filters');
         // $operator = $this->config->get('plugins.random.filter_combinator', 'and');
 
-        switch($this->grav['uri'])
+        switch($this->grav['uri']->getCurrentRoute())
         {
             case $this->config->get('plugins.matlib-randomize.route_item.url'):
                 $route = $this->config->get('plugins.matlib-randomize.route_item.route');
-                randomPage($route);
+		$this->redirectToRandomPage($route);
                 break;
             case $this->config->get('plugins.matlib-randomize.route_material.url'):
                 $route = $this->config->get('plugins.matlib-randomize.route_material.route');
-                randomPage($route);
+                $this->redirectToRandomPage($route);
                 break;
             case $this->config->get('plugins.matlib-randomize.route_process.url'):
                 $route = $this->config->get('plugins.matlib-randomize.route_process.route');
-                randomPage($route);
+                $this->redirectToRandomPage($route);
                 break;
             default:
+		$this->grav['log']->error("\nERROR:\nRandom page initialized but somehow not");
+		$this->grav['log']->error("URI: {$this->grav['uri']->getCurrentRoute()}\n");
+		$this->grav['log']->error("Should be: {$this->config->get('plugins.matlib-randomize.route_process.url')}");
                 break;
         }
-    
-        function randomPage($route)
-        {
-            $collection = $this->grav['pages']->children($route);
-            if (count($collection)) {
-                unset($this->grav['page']);
-                $page = $collection->random()->current();
+    }
 
-                if ($this->config->get('plugins.matlib-randomize.redirect', true)) {
-                    $this->grav->redirect($page->url(true));
-                } else {
-                    // override the modified time
-                    $page->modified(time());
-                    $this->grav['page'] = $page;
+    protected function redirectToRandomPage($route)
+    {
+	    $this->grav['log']->notice("Finding random page in category {$route}");
+	    $collection = $this->grav['pages']->children($route);
+	    if (count($collection)) {
+		    unset($this->grav['page']);
+		    $page = $collection->random()->current();
 
-                    // Convince the URI object that it is this random page...
-                    $uri = $this->grav['uri'];
-                    $uri->url = $uri->base().$page->url();
-                    $uri->init();
-                }
-            }
+		    if ($this->config->get('plugins.matlib-randomize.redirect', true)) {
+			    $this->grav->redirect($page->url(true));
+		    } else {
+			    // override the modified time
+			    $page->modified(time());
+			    $this->grav['page'] = $page;
 
-        }
+			    // Convince the URI object that it is this random page...
+			    $uri = $this->grav['uri'];
+			    $uri->url = $uri->base().$page->url();
+			    $uri->init();
+		    }
+	    }
+
     }
 }
