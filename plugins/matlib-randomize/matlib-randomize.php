@@ -62,7 +62,7 @@ class MatlibRandomizePlugin extends Plugin
 
         $routes = [$route_item, $route_material, $route_process];
 
-        if (count($routes) && $uri->path() in $routes) {
+        if (count($routes) && in_array($this->grav['uri'], $routes)) {
             $this->enable([
                 'onPageInitialized' => ['onPageInitialized', 0]
             ]);
