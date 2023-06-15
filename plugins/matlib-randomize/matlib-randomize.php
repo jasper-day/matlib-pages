@@ -107,8 +107,9 @@ class MatlibRandomizePlugin extends Plugin
     protected function redirectToRandomPage($route)
     {
 	    $this->grav['log']->notice("Finding random page in category {$route}");
-	    $collection = $this->grav['pages']->children($route);
+	    $collection = new Collection(['@page.children', $route]);
 	    if (count($collection)) {
+		    $this->grav['log']->notice("Collection successfully initialized");
 		    unset($this->grav['page']);
 		    $page = $collection->random()->current();
 
