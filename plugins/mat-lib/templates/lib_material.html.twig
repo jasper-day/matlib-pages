@@ -1,0 +1,37 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% if page.header.title %}
+    <h2>{{page.header.title|e }}</h2>
+    {% endif %}
+
+    {{ page.content|raw }}
+
+
+    <h3>Library items made with this material</h3>
+    {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
+    <ul>
+    {% for i in material_items %}
+        {% if page.route in  i.header.material_type %}
+        <li>
+        <a href="{{ i.url|e }}">{{ i.header.title|e }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+    {% set processType = page.header.processes|e %}
+    {% if processType %}
+    <h3>Processes used on this material</h3>
+    <ul>
+        {% for link in processType %}
+            {% set referencePage = grav.page.find(link) %}
+            {% if referencePage %}
+                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+{% endblock %}
