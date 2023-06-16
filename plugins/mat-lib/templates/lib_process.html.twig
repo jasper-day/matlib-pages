@@ -1,0 +1,22 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% if page.header.title %}
+    <h2>{{page.header.title|e }}</h2>
+    {% endif %}
+
+    {{ page.content|raw }}
+    
+    <h3>Library materials formed with this process</h3>
+    {% set process_materials = page.collection({'items': {'@page.children': '/materials'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
+    <ul>
+    {% for i in process_materials %}
+        {% if page.route in  i.header.processes %}
+        <li>
+        <a href="{{ i.url|e }}">{{ i.header.title|e }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+{% endblock %}
