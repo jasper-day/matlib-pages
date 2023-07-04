@@ -85,6 +85,7 @@ blockquote {
 
 .header a {
     color: hsl(300, 60%, 25%);
+    text-decoration: none;
 }
 
 .header .logo {
@@ -140,12 +141,12 @@ blockquote {
 
 /*Active dropdown nav item */
 .main-nav ul li:hover > a {
-    background-color: #fff;
+    background-color: #f0f0f0;
 }
 
 /* Selected Dropdown nav item */
 .main-nav ul li.selected > a {
-    background-color: lightcyan;
+    background-color: #fefefe;
     color: hsl(300, 60%, 30%);
 }
 
