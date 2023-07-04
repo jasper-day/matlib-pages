@@ -1,0 +1,21 @@
+
+{% extends 'partials/base.html.twig' %}
+{% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
+{% set collection = page.collection() %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+
+{% block content %}
+    <div class="main content pure-g">
+        {% if show_sidebar %}
+            <div class="sidebar pure-u-1 pure-u-md-1-4">
+                {% include 'partials/sidebar.html.twig' %}
+            </div>
+        {% endif %}
+        <div class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4 {% if show_sidebar %}pure-u-lg-1-5{% endif %}">
+            {% for child in collection %}
+                {% include 'partials/listing_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
+            {% endfor %}
+
+    </div>
+{% endblock %}
