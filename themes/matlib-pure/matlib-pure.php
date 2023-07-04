@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class MatlibBootstrap extends Bootstrap4
+class MatlibPure extends Theme
 {
     // Access plugin events in this class
 }
