@@ -92,13 +92,19 @@ blockquote {
     font-size: 2rem;
 }
 
-.header .logo .text-mat {
+.header .logo > .logo-text {
+    margin: 0 auto;
+}
+
+#text-mat {
     color: #5f8dd3;
 }
 
-.header .logo .text-lib {
+#text-lib {
     color: #bc5fd3;
 }
+
+
 
 .footer {
     background-color: #eee;
