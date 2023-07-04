@@ -24,12 +24,12 @@ h6 {
 }
 
 a {
-    color: hsl(300, 60%, 22%);
+    color: hsl(220, 60%, 30%);
     text-decoration: underline;
 }
 
 a:hover {
-    color: hsl(300, 60%, 30%);
+    color: hsl(220, 60%, 40%);
 }
 
 pre {
@@ -93,6 +93,8 @@ blockquote {
 }
 
 .header .logo > .logo-text {
+    display: inline-block;
+    text-decoration: none;
     margin: 0 auto;
 }
 
