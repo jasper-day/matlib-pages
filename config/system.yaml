@@ -27,6 +27,7 @@ languages:
   override_locale: false
   content_fallback: {  }
   pages_fallback_only: false
+  debug: false
 home:
   alias: /home
   hide_in_urls: false
@@ -34,7 +35,7 @@ pages:
   type: regular
   dirs:
     - 'page://'
-  theme: materials-library
+  theme: matlib-pure
   order:
     by: default
     dir: asc
