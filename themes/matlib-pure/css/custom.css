@@ -1,4 +1,7 @@
 /* Core Stuff */
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -76,17 +79,25 @@ blockquote {
 }
 
 .header {
-    background-color: #1F8DD6;
-    color: #eee;
+    background-color: lightgray;
+    color: #110F0F;
 }
 
 .header a {
-    color: #fff;
+    color: darkmagenta;
 }
 
 .header .logo {
-    font-size: 1.7rem;
-    text-transform: uppercase;
+    font-family: "Righteous", cursive;
+    font-size: 2rem;
+}
+
+.header .logo .text-mat {
+    color: #5f8dd3;
+}
+
+.header .logo .text-lib {
+    color: #bc5fd3;
 }
 
 .footer {
@@ -110,7 +121,7 @@ blockquote {
     position: relative;
     display: block;
     line-height: 45px;
-    color: #fff;
+    color: darkorchid;
     padding: 0 20px;
     white-space: nowrap;
 }
@@ -121,13 +132,13 @@ blockquote {
 
 /*Active dropdown nav item */
 .main-nav ul li:hover > a {
-    background-color: #175E91;
+    background-color: gray;
 }
 
 /* Selected Dropdown nav item */
 .main-nav ul li.selected > a {
-    background-color: #fff;
-    color: #175E91;
+    background-color: lightcyan;
+    color: darkmagenta;
 }
 
 /* Dropdown CSS */
@@ -135,7 +146,7 @@ blockquote {
 
 .main-nav ul li ul {
     position: absolute;
-    background-color: #1F8DD6;
+    background-color: gray;
     min-width: 100%;
     text-align: left;
     z-index: 999;
