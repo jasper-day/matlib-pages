@@ -9,7 +9,7 @@
         <div class="pure-u-1 {% if show_sidebar %}pure-u-md-3-4{% endif %}">
             <div class="pure-g">
                 {% for child in collection %}
-                    <div class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4 padding">
                     {% include 'partials/listing_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
                     </div>
                 {% endfor %}

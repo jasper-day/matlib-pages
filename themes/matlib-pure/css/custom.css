@@ -110,7 +110,7 @@ blockquote {
 
 
 .footer {
-    background-color: #eee;
+    background-color: #f5f5f5;
 }
 
 /* Menu Settings */
@@ -141,7 +141,7 @@ blockquote {
 
 /*Active dropdown nav item */
 .main-nav ul li:hover > a {
-    background-color: #f0f0f0;
+    background-color: #f5e0fe;
 }
 
 /* Selected Dropdown nav item */
