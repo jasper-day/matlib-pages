@@ -34,7 +34,7 @@
     <div class="header">
         <div class="wrapper padding">
             <a class="logo left" href="{{ home_url|e }}">
-                <i class="fa fa-rebel"></i>
+                <img src="{{ url('theme://images/logo.png')|e }}" alt="Logo" />
                 {{ config.site.title|e }}
             </a>
             {% block header_navigation %}
