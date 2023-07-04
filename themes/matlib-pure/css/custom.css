@@ -11,7 +11,7 @@
 body {
     font-size: 1rem;
     line-height: 1.7;
-    color: #606d6e;
+    color: hsl(200, 10%, 20%);
 }
 
 h1,
@@ -20,16 +20,16 @@ h3,
 h4,
 h5,
 h6 {
-    color: #454B4D;
+    color: hsl(240, 50%, 25%);
 }
 
 a {
-    color: #1F8CD6;
-    text-decoration: none;
+    color: hsl(300, 60%, 22%);
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #175E91;
+    color: hsl(300, 60%, 30%);
 }
 
 pre {
@@ -79,12 +79,12 @@ blockquote {
 }
 
 .header {
-    background-color: lightgray;
+    background-color: #eee;
     color: #110F0F;
 }
 
 .header a {
-    color: darkmagenta;
+    color: hsl(300, 60%, 25%);
 }
 
 .header .logo {
@@ -127,7 +127,7 @@ blockquote {
     position: relative;
     display: block;
     line-height: 45px;
-    color: darkorchid;
+    color: hsl(300, 60%, 25%);
     padding: 0 20px;
     white-space: nowrap;
 }
@@ -138,13 +138,13 @@ blockquote {
 
 /*Active dropdown nav item */
 .main-nav ul li:hover > a {
-    background-color: gray;
+    background-color: #fff;
 }
 
 /* Selected Dropdown nav item */
 .main-nav ul li.selected > a {
     background-color: lightcyan;
-    color: darkmagenta;
+    color: hsl(300, 60%, 30%);
 }
 
 /* Dropdown CSS */
@@ -152,7 +152,7 @@ blockquote {
 
 .main-nav ul li ul {
     position: absolute;
-    background-color: gray;
+    background-color: lightgray;
     min-width: 100%;
     text-align: left;
     z-index: 999;
