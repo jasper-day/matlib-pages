@@ -1,4 +1,6 @@
-{% extends 'partials/lib_template.html.twig' %}
+{% extends 'partials/base.html.twig' %}
+
+{% embed 'partials/lib_template.html.twig' %}
 
 {% block collections %}
     {% set materials = page.header.materials|e %}
@@ -7,3 +9,5 @@
         {% include('partials/lib_related_items.html.twig') with {link_list: materials} %}
     {% endif %}
 {% endblock %}
+
+{% endembed %}

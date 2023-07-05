@@ -1,4 +1,6 @@
-{% extends 'partials/lib_template.html.twig' %}
+{% extends 'partials/base.html.twig' %}
+
+{% embed 'partials/lib_template.html.twig' %}
 
 {% block collections %}
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
@@ -13,3 +15,5 @@
         {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
     {% endif %}
 {% endblock %}
+
+{% endembed %}
