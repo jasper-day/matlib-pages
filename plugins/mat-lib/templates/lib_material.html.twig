@@ -27,7 +27,7 @@
             {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
             {% if material_items.count > 0 %}
             <h3>Library items made with this material</h3>
-            {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: child.header.material_type, route: page.route} %}
+            {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type', route: page.route} %}
             {% endif %}
 
             {# {% for i in material_items %}
