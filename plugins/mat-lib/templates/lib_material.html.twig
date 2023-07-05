@@ -11,31 +11,43 @@
     {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
 {% endblock %}
 
-{% block content %}
-    {% if page.header.title %}
-    <h2>{{page.header.title|e }}</h2>
-    {% endif %}
+{% block body %}
+    
+    {% embed 'partials/layout.html.twig' with {blog: page} %}
+        {% block item %}
 
-    {{ page.content|raw }}
+            {% block content %}
+                {% if page.header.title %}
+                <h2>{{page.header.title|e }}</h2>
+                {% endif %}
+                {{ page.content|raw }}
+            {% endblock %}            
+            
+            
+            {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
+            {% if material_items.count > 0 %}
+            <h3>Library items made with this material</h3>
+            {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type', route: page.route} %}
+            {% endif %}
 
+            {# {% for i in material_items %}
+                {% if page.route in  i.header.material_type %}
+                <li class="column col-xs-4 col-md-3 col-lg-1 col-mr-auto">
+                    {% include 'partials/blog-list-item.html.twig' with {blog: page, page: i} %}
+                </li>
+                {% endif %}
+            {% endfor %} #}
 
-    <h3>Library items made with this material</h3>
-    {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
-    {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type', route: page.route} %}
-
-    {# {% for i in material_items %}
-        {% if page.route in  i.header.material_type %}
-        <li class="column col-xs-4 col-md-3 col-lg-1 col-mr-auto">
-            {% include 'partials/blog-list-item.html.twig' with {blog: page, page: i} %}
-        </li>
-        {% endif %}
-    {% endfor %} #}
-
-    {% set processType = page.header.processes|e %}
-    {% if processType %}
-    <h3>Processes used on this material</h3>
-    {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
-    {% endif %}
+            {% set processType = page.header.processes|e %}
+            {% if processType %}
+            <h3>Processes used on this material</h3>
+            {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
+            {% endif %}
+        {% endblock %}
+        {% block sidebar %}
+            {% include 'partials/sidebar.html.twig' %}
+        {% endblock %}
+    {% endembed %}
 
 
 {% endblock %}
