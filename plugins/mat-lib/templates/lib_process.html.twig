@@ -1,49 +1,9 @@
-{% extends 'partials/base.html.twig' %}
-
-{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
-{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
-{% block stylesheets %}
-    {{ parent() }}
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
-{% endblock %}
-
-{% block body %}
-    <div class="wrapper padding padding-around">
-    {% embed 'partials/layout.html.twig' with {blog: page} %}
-        {% block item %}
-            <section id="body">
-            <div class="wrapper padding">
-                {% block content %}
-                        {% if page.header.title %}
-                    <h2>{{page.header.title|e }}</h2>
-                    {% endif %}
-                    {{ page.content|raw }}
-                {% endblock %}
+{% extends 'lib_material.html.twig' %}
                 
-                {% block gallery %}
-                    <h3>Gallery</h3>
-                    {% include('partials/lib_image_gallery.html.twig') %}
-                {% endblock %}
-
-                {% block collections %}
-                    {% set material_processes = page.collection({'items': {'@page.children': '/materials'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
-                    {% if material_processes.count > 0 %}
-                        <h3>Materials formed with this process</h3>
-                    {% include('partials/lib_related_items.html.twig') with {collection: material_processes, header_var: 'process', route: page.route} %}
-                    {% endif %}
-                {% endblock %}
-
-            </div>
-            </section>
-        {% block sidebar %}
-            <div class="padding-top">
-            {% include 'partials/sidebar.html.twig' %}
-            </div>
-        {% endblock %}
-    {% endembed %}
-    </div>
+{% block collections %}
+    {% set material_processes = page.collection({'items': {'@page.children': '/materials'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
+    {% if material_processes.count > 0 %}
+        <h3>Materials formed with this process</h3>
+    {% include('partials/lib_related_items.html.twig') with {collection: material_processes, header_var: 'process', route: page.route} %}
+    {% endif %}
 {% endblock %}
