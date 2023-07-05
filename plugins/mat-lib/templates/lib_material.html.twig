@@ -12,19 +12,15 @@
 {% endblock %}
 
 {% block body %}
-    
+        <section id="body">
+        <div class="wrapper padding">
+        {% block content %}
+            {% if page.header.title %}
+            <h2>{{page.header.title|e }}</h2>
+            {% endif %}
+            {{ page.content|raw }}
     {% embed 'partials/layout.html.twig' with {blog: page} %}
         {% block item %}
-            <section id="body">
-            <div class="wrapper padding">
-            {% block content %}
-                {% if page.header.title %}
-                <h2>{{page.header.title|e }}</h2>
-                {% endif %}
-                {{ page.content|raw }}
-            {% endblock %}
-            </div>
-            </section>            
             
             
             {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
@@ -51,6 +47,7 @@
             {% include 'partials/sidebar.html.twig' %}
         {% endblock %}
     {% endembed %}
-
-
+    {% endblock %}
+    </div>
+    </section>            
 {% endblock %}
