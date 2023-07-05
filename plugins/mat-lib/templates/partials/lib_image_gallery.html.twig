@@ -1,8 +1,8 @@
 <div class="container">
     <div class="columns col-oneline">
         <div class="column col-auto">
-        {% for imagesuploaded in page.header.images %}
-            {{page.media[imagesuploade.name].lightbox(1024,768).cropresize(200,200).html('','',false)|raw}}
+        {% for image in page.media.images %}
+            {{page.media[image.name].lightbox(1024,768).cropresize(200,200).html('','',false)|raw}}
         {% endfor %}
         </div>
     </div>
