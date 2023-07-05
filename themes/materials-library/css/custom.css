@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-.bricklayer-column-sizer {
-    width: 50%;
-}
-
-@media screen and (min-width: 640px) {
-    .bricklayer-column-sizer {
-        width: 33.333%;
-    }
-}
-
-@media screen and (min-width: 980px) {
-    .bricklayer-column-sizer {
-        width: 25%;
-    }
-}
-
 .container.grid-lg {
     max-width: 80vw;
 }
@@ -67,3 +51,6 @@
     display: none
 }
 
+.card-image-raw {
+    width: 100%;
+}
