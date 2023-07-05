@@ -35,7 +35,7 @@ pages:
   type: regular
   dirs:
     - 'page://'
-  theme: matlib-pure
+  theme: materials-library
   order:
     by: default
     dir: asc
