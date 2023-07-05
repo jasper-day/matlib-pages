@@ -16,7 +16,7 @@
     {% embed 'partials/layout.html.twig' with {blog: page} %}
         {% block item %}
             <section id="body">
-            <div class="wrapper padding padding-around">
+            <div class="wrapper padding">
             {% block content %}
                     {% if page.header.title %}
                 <h2>{{page.header.title|e }}</h2>
@@ -27,18 +27,18 @@
             {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
             {% if material_items.count > 0 %}
             <h3>Library items made with this material</h3>
-            {# {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type', route: page.route} %} #}
-            {# {% endif %} #}
+            {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: child.header.material_type, route: page.route} %}
+            {% endif %}
 
-            {% for i in material_items %}
+            {# {% for i in material_items %}
                 {% set i_routes_list = evaluate('i.header.' ~ 'material_type') %}
                 {% if page.route in i_routes_list %}
                 <li class="column col-xs-4 col-md-3 col-lg-1 col-mr-auto">
                     {% include 'partials/blog-list-item.html.twig' with {blog: page, page: i} %}
                 </li>
-                {% endif %}
-            {% endfor %}
-            {% endif %}
+                {% endif %} #}
+            {# {% endfor %} #}
+            {# {% endif %} #}
 
             {% set processType = page.header.processes|e %}
             {% if processType %}
