@@ -1,4 +1,4 @@
-{% extends 'lib_template.html.twig' %}
+{% extends 'partials/lib_template.html.twig' %}
 
 {% block collections %}
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
