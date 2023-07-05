@@ -4,6 +4,10 @@
     padding: 3rem 1rem;
 }
 
+.padding-top {
+    padding-top: 10rem;
+}
+
 .container.grid-lg {
     max-width: 80vw;
 }

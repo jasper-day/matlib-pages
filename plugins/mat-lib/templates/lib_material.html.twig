@@ -12,11 +12,11 @@
 {% endblock %}
 
 {% block body %}
-    <div class="wrapper padding">
+    <div class="wrapper padding padding-around">
     {% embed 'partials/layout.html.twig' with {blog: page} %}
         {% block item %}
             <section id="body">
-            <div class="wrapper padding">
+            <div class="wrapper padding padding-around">
             {% block content %}
                     {% if page.header.title %}
                 <h2>{{page.header.title|e }}</h2>
