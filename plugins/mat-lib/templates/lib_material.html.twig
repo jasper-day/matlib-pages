@@ -24,7 +24,10 @@
                 {{ page.content|raw }}
             {% endblock %}
             
+            {% block gallery %}
+            <h3>Gallery</h3>
             {% include('partials/lib_image_gallery.html.twig') %}
+            {% endblock %}
 
             {% block collections %}
             {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
