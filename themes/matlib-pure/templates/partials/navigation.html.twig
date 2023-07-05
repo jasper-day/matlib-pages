@@ -47,7 +47,8 @@
     {% endfor %}
 </ul>
 
-{% do assets.addInlineJs("""
+<script>
+
 (function (window, document) {
     var menu = document.getElementById('menu'),
         rollback,
@@ -93,4 +94,6 @@
     });
 
     window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
-    })(this, this.document);""") %}
+    })(this, this.document);
+
+    </script>
