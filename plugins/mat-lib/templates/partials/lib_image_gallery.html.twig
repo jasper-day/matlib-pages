@@ -2,7 +2,7 @@
     <div class="columns col-oneline">
         <div class="column col-auto">
         {% for image in page.media.images %}
-            {{page.media[image.name].lightbox(1024,768).cropresize(200,200).html('','',false)|raw}}
+            {{ image.lightbox(1024,768).cropresize(200,200).html|raw }}
         {% endfor %}
         </div>
     </div>
