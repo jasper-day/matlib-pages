@@ -10,7 +10,7 @@ Variables:
 <ul class="columns">
 {% if collection %}
     {% for child in collection %}
-        {% if header_var = 'material_type' %}
+        {% if header_var == 'material_type' %}
             {% set child_header = child.header.material_type %}
         {% endif %}
         {% if route in child_header %}
