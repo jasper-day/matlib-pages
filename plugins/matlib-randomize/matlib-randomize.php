@@ -55,7 +55,6 @@ class MatlibRandomizePlugin extends Plugin
         }
 
         $path = $this->grav['uri']->path();
-	$this->grav['log']->notice("Random URI initialized: {$uri}");
         $route_item = $this->config->get('plugins.matlib-randomize.route_item.url');
         $route_material = $this->config->get('plugins.matlib-randomize.route_material.url');
         $route_process = $this->config->get('plugins.matlib-randomize.route_process.url');
