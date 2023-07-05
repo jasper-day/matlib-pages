@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+.padding {
+    padding: 3rem 1rem;
+}
+
 .container.grid-lg {
     max-width: 80vw;
 }
