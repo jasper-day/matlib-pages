@@ -21,7 +21,7 @@
 
     <h3>Library items made with this material</h3>
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
-    {% include('partials/lib_related_items.html.twig') with collection: material_items, header_var: 'material_type', route: page.route %}
+    {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type', route: page.route} %}
 
     {# {% for i in material_items %}
         {% if page.route in  i.header.material_type %}
@@ -34,7 +34,7 @@
     {% set processType = page.header.processes|e %}
     {% if processType %}
     <h3>Processes used on this material</h3>
-    {% include('partials/lib_related_items.html.twig') with link_list: processType %}
+    {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
     {% endif %}
 
 
