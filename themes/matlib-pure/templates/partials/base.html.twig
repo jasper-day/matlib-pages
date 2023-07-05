@@ -16,12 +16,14 @@
 {% block stylesheets %}
     {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %}
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99) %}
-    {% do assets.addCss('theme://css/custom.css', 98) %}
     {% do assets.addCss("https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css") %}
+    {% do assets.addCss('theme://css/custom.css', 98) %}
+    {% do assets.addCss('theme://css/header.css', 97) %}
 {% endblock %}
 
 {% block javascripts %}
     {% do assets.addJs('jquery', 100) %}
+    {% do assets.addJs('theme://js/header.js') %}
 {% endblock %}
 
 {% block assets deferred %}
@@ -32,35 +34,7 @@
 <body id="top" class="{{ page.header.body_classes|e }}">
 
 {% block header %}
-    <div class="main-container header">
-        <div class="wrapper padding">
-            <div class="flex-grid navbar">
-                {# For mobile menu #}
-                <input type="checkbox" id="mobileMenu" class="hide">
-                <label id="mobileMenuLabel" class="mobile-menu left-side" for="mobileMenu">
-                    <i class="hamburger"></i>
-                    <label class="full-screen" for="mobileMenu"></label>
-                </label>
-                {# Logo here #}
-                <div class="col-2 col-12-md logo">
-                <a class="logo-link" href="{{ home_url|e }}">
-                    <img src="{{ url('theme://images/logo.svg')|e }}" alt="Logo" width="30" height="30" />
-                    <div class="logo-text">
-                    <span id="text-mat">mat</span><span id="text-lib">lib</span>
-                    </div>
-                </a>
-                </div>
-                {# Navigation here #}
-                {% block header_navigation %}
-                <nav class="main-nav col-7 col-12-md">
-                    <div class="navbar-links">
-                    {% include 'partials/navigation.html.twig' %}
-                    </div>
-                </nav>
-                {% endblock %}
-            </div>
-        </div>
-    </div>
+    {% include 'partials/header.html.twig' %}
 {% endblock %}
 
 {% block body %}
