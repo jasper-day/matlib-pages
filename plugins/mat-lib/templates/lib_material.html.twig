@@ -10,24 +10,31 @@
 
     <h3>Library items made with this material</h3>
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
-    <ul>
+    <div class="container">
+    <ul class="columns">
     {% for i in material_items %}
         {% if page.route in  i.header.material_type %}
-        <li>
-        <a href="{{ i.url|e }}">{{ i.header.title|e }}</a>
+        <li class="column col-xs-4 col-md-3 col-lg-1">
+            {% include 'partials/blog-list-item.html.twig' with {blog: page, page: i} %}
+        {# <a href="{{ i.url|e }}">{{ i.header.title|e }}</a> #}
         </li>
         {% endif %}
     {% endfor %}
     </ul>
+    </div>
 
     {% set processType = page.header.processes|e %}
     {% if processType %}
     <h3>Processes used on this material</h3>
-    <ul>
+    <div class="container">
+    <ul class="columns">
         {% for link in processType %}
             {% set referencePage = grav.page.find(link) %}
             {% if referencePage %}
-                <li><a href="{{ link|e }}">{{ referencePage.header.title|e }}</a></li>
+                <li class="column col-xs-4 col-md-3 col-lg-1">
+                {#<a href="{{ link|e }}">{{ referencePage.header.title|e }}</a>#}
+                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: referencePage} %}
+                </li>
             {% endif %}
         {% endfor %}
     </ul>
