@@ -32,19 +32,33 @@
 <body id="top" class="{{ page.header.body_classes|e }}">
 
 {% block header %}
-    <div class="header">
+    <div class="main-container header">
         <div class="wrapper padding">
-            <a class="logo left" href="{{ home_url|e }}">
-                <img src="{{ url('theme://images/logo.svg')|e }}" alt="Logo" width="30" height="30" />
-                <div class="logo-text">
-                <span id="text-mat">mat</span><span id="text-lib">lib</span>
+            <div class="flex-grid navbar">
+                {# For mobile menu #}
+                <input type="checkbox" id="mobileMenu" class="hide">
+                <label id="mobileMenuLabel" class="mobile-menu left-side" for="mobileMenu">
+                    <i class="hamburger"></i>
+                    <label class="full-screen" for="mobileMenu"></label>
+                </label>
+                {# Logo here #}
+                <div class="col-2 col-12-md logo">
+                <a class="logo-link" href="{{ home_url|e }}">
+                    <img src="{{ url('theme://images/logo.svg')|e }}" alt="Logo" width="30" height="30" />
+                    <div class="logo-text">
+                    <span id="text-mat">mat</span><span id="text-lib">lib</span>
+                    </div>
+                </a>
                 </div>
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
-            {% endblock %}
+                {# Navigation here #}
+                {% block header_navigation %}
+                <nav class="main-nav col-7 col-12-md">
+                    <div class="navbar-links">
+                    {% include 'partials/navigation.html.twig' %}
+                    </div>
+                </nav>
+                {% endblock %}
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -1,6 +1,15 @@
 /* Core Stuff */
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Source+Sans+3&display=swap');
+
+:root {
+    --main-bg-color: #FBFEFB; /* baby powder */
+    --main-text-color: #0D0C1D; /* rich black */
+    --accent-color-one: #D1345B; /* cerise */
+    --accent-color-two: #474973; /* ultra violet */
+    --accent-color--three: #258EA6; /* blue (munsell)*/
+    --link-color:#118bee;
+}
 
 * {
     -webkit-box-sizing: border-box;
@@ -10,6 +19,7 @@
 
 body {
     font-size: 1rem;
+    font-family: 'Source Sans 3', sans-serif;
     line-height: 1.7;
     color: hsl(200, 10%, 20%);
 }
@@ -20,20 +30,20 @@ h3,
 h4,
 h5,
 h6 {
-    color: hsl(240, 50%, 25%);
+    color: var(--accent-color-two);
 }
 
 a {
-    color: hsl(220, 60%, 30%);
+    color: var(--link-color);
     text-decoration: underline;
 }
 
 a:hover {
-    color: hsl(220, 60%, 40%);
+    filter: brightness(1.2);
 }
 
 pre {
-    background: #F0F0F0;
+    background: var(--main-bg-color);
     margin: 1rem 0;
     border-radius: 2px;
 }
@@ -84,7 +94,7 @@ blockquote {
 }
 
 .header a {
-    color: hsl(300, 60%, 25%);
+    color: var(--accent-color-two);
     text-decoration: none;
 }
 
@@ -100,11 +110,11 @@ blockquote {
 }
 
 #text-mat {
-    color: #5f8dd3;
+    color: var(--accent-color--three);
 }
 
 #text-lib {
-    color: #bc5fd3;
+    color: var(--accent-color-one);
 }
 
 
@@ -130,7 +140,7 @@ blockquote {
     position: relative;
     display: block;
     line-height: 45px;
-    color: hsl(300, 60%, 25%);
+    color: var(--accent-color-two);
     padding: 0 20px;
     white-space: nowrap;
 }
@@ -141,13 +151,13 @@ blockquote {
 
 /*Active dropdown nav item */
 .main-nav ul li:hover > a {
-    background-color: #f5e0fe;
+    background-color: var(--accent-color-one);
 }
 
 /* Selected Dropdown nav item */
 .main-nav ul li.selected > a {
-    background-color: #fefefe;
-    color: hsl(300, 60%, 30%);
+    background-color: #bebebe;
+    filter: brightness(1.2);
 }
 
 /* Dropdown CSS */
