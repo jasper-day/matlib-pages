@@ -17,24 +17,25 @@
         {% block item %}
             <section id="body">
             <div class="wrapper padding">
-            {% block content %}
-                    {% if page.header.title %}
-                <h2>{{page.header.title|e }}</h2>
-                {% endif %}
-                {{ page.content|raw }}
-            {% endblock %}
-            
-            {% block gallery %}
-            <h3>Gallery</h3>
-            {% include('partials/lib_image_gallery.html.twig') %}
-            {% endblock %}
+                {% block content %}
+                        {% if page.header.title %}
+                    <h2>{{page.header.title|e }}</h2>
+                    {% endif %}
+                    {{ page.content|raw }}
+                {% endblock %}
+                
+                {% block gallery %}
+                    <h3>Gallery</h3>
+                    {% include('partials/lib_image_gallery.html.twig') %}
+                {% endblock %}
 
-            {% block collections %}
-            {% set materials = page.header.materials|e %}
-            {% if materials %}
-            <h3>Materials making up this item</h3>
-            {% include('partials/lib_related_items.html.twig') with {link_list: materials} %}
-            {% endif %}
+                {% block collections %}
+                    {% set materials = page.header.materials|e %}
+                    {% if materials %}
+                        <h3>Materials making up this item</h3>
+                        {% include('partials/lib_related_items.html.twig') with {link_list: materials} %}
+                    {% endif %}
+                {% endblock %}
 
             </div>
             </section>
