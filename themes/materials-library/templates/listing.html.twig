@@ -18,13 +18,17 @@
 
 {% block body %}
     <section id="body-wrapper" class="section blog-listing">
+    <div class="hero">
+    <div class="hero-body">
+    <h1 class="title">{{ page.title|e }}</h1>
+    <h2 class="subtitle">{{ page.content|raw }}</h2>
+    </div>
+    </div>
+
         <section class="container {{ grid_size }}">
 
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
-                {% block content %}
-                    {{ page.content|raw }}
-                {% endblock %}
                 <div class="container">
                 <div class="columns">
                     {% for child in collection %}
