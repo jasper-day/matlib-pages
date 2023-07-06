@@ -13,13 +13,13 @@
         {% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
         </div>
     </div>
-    <div class="card-body">
+    {#<div class="card-body">
         {% if page.summary != page.content %}
             {{ page.summary|raw }}
         {% else %}
             {{ page.content|length > 40 ? page.content|striptags|slice(0, 40)|split(' ')|slice(0, -1)|join(' ') ~ '…' : page.content|striptags }}
         {% endif %}
-    </div>
+    </div>#}
     <div class="card-footer">
         {% include 'partials/blog/taxonomy.html.twig' %}
     </div>
