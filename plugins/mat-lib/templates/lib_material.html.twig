@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block body %}
-    {% embed 'partials/lib_template.html.twig' }
+    {% embed 'partials/lib_template.html.twig' %}
         {% block collections %}
             {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
             {% if material_items.count > 0 %}
