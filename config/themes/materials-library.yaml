@@ -15,4 +15,4 @@ sticky-footer: true
 spectre:
   exp: false
   icons: false
-custom_logo: { name: 'logo.svg' }
+custom_logo: { }
