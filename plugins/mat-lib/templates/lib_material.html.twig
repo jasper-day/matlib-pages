@@ -1,15 +1,19 @@
-{% extends 'partials/lib_template.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
-{% block collection %}
-    {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
-    {% if material_items.count > 0 %}
-        <h3>Library items made with this material</h3>
-        {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type'} %}
-    {% endif %}
+{% block body %}
+    {% embed 'partials/lib_template.html.twig' }
+        {% block collections %}
+            {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
+            {% if material_items.count > 0 %}
+                <h3>Library items made with this material</h3>
+                {% include('partials/lib_related_items.html.twig') with {collection: material_items, header_var: 'material_type'} %}
+            {% endif %}
 
-    {% set processType = page.header.processes|e %}
-    {% if processType %}
-        <h3>Processes used on this material</h3>
-        {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
-    {% endif %}
+            {% set processType = page.header.processes|e %}
+            {% if processType %}
+                <h3>Processes used on this material</h3>
+                {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
+            {% endif %}
+        {% endblock %}
+    {% endembed %}
 {% endblock %}
