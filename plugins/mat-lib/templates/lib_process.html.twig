@@ -9,17 +9,24 @@
         {% block item %}
             <section id="body">
                 <div class="wrapper padding">
+                    <div class="container">
+                    <div class="columns">
+                    <div class="column col-12 col-lg-6">
                     {% block content %}
                         {% if page.header.title %}
                             <h2>{{page.header.title|e }}</h2>
                         {% endif %}
                         {{ page.content|raw }}
                     {% endblock %}
-                    
+                    </div>
+                    <div class="column col-12 col-lg-6">
                     {% block gallery %}
                         <h3>Gallery</h3>
                         {% include('partials/lib_image_gallery.html.twig') %}
                     {% endblock %}
+                    </div>
+                    </div>
+                    </div>
 
                     {% block collections %}
                         {% include('partials/lib_process_collection.html.twig') %}

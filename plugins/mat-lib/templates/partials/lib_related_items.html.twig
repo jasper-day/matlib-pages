@@ -12,7 +12,7 @@ Variables:
         {% if header_var == 'material_type' %}
             {% set child_header = child.header.material_type %}
         {% elseif header_var == 'process' %}
-            {% set child_header = child.header.process %}
+            {% set child_header = child.header.processes %}
         {% endif %}
         {% if page.route in child_header %}
         <li class="column col-xs-4 col-md-3 col-lg-1 col-mr-auto">
