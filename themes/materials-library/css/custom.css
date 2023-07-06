@@ -14,6 +14,10 @@
     padding-top: 10rem;
 }
 
+.padding-bottom {
+    padding-bottom: 10rem;
+}
+
 .container.grid-lg {
     max-width: 80vw;
 }
@@ -29,13 +33,13 @@
 #header .navbar-text-mat {
     font-family: "Righteous", cursive;
     font-size: 2rem;
-    color: #5f8dd3;
+    color: #D1345B;
 }
 
 #header .navbar-text-lib {
     font-family: "Righteous", cursive;
     font-size: 2rem;
-    color: #bc5fd3;
+    color: #474973;
 }
 
 #header .navbar-logo-text {
