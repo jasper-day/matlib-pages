@@ -1,5 +1,37 @@
-{% extends 'partials/lib_template.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
-{% block lib_def %}
-    {% set lib_collection = "item_collection" %}
+
+{% block body %}
+        {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+        {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+<div class="wrapper padding padding-around">
+    {% embed 'partials/layout.html.twig' with {blog: page} %}
+        {% block item %}
+            <section id="body">
+                <div class="wrapper padding">
+                    {% block content %}
+                        {% if page.header.title %}
+                            <h2>{{page.header.title|e }}</h2>
+                        {% endif %}
+                        {{ page.content|raw }}
+                    {% endblock %}
+                    
+                    {% block gallery %}
+                        <h3>Gallery</h3>
+                        {% include('partials/lib_image_gallery.html.twig') %}
+                    {% endblock %}
+
+                    {% block collections %}
+                        {% include('partials/lib_item_collection.html.twig') %}
+                    {% endblock %}
+                </div>
+            </section>
+        {% endblock %}
+        {% block sidebar %}
+            <div class="padding-top">
+                {% include('partials/sidebar.html.twig') %}
+            </div>
+        {% endblock %}
+    {% endembed %}
+</div>
 {% endblock %}
