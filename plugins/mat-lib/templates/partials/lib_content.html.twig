@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="columns">
+        <div class="column col-4 col-lg-12">
+            <h3>Gallery</h3>
+                {% include('partials/lib_image_gallery.html.twig') %}    
+        </div>
+        <div class="column col-8 col-lg-12">
+            {% if page.header.title %}
+                <h2>{{page.header.title|e }}</h2>
+            {% endif %}
+            {{ page.content|raw }}
+            {% endblock %}
+        </div>
+    </div>
+</div>

@@ -9,17 +9,7 @@
         {% block item %}
             <section id="body">
                 <div class="wrapper padding">
-                    {% block content %}
-                        {% if page.header.title %}
-                            <h2>{{page.header.title|e }}</h2>
-                        {% endif %}
-                        {{ page.content|raw }}
-                    {% endblock %}
-                    
-                    {% block gallery %}
-                        <h3>Gallery</h3>
-                        {% include('partials/lib_image_gallery.html.twig') %}
-                    {% endblock %}
+                    {% include('partials/lib_content.html.twig')%}
 
                     {% block collections %}
                         {% include('partials/lib_item_collection.html.twig') %}
