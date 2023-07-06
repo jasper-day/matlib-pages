@@ -1,6 +1,6 @@
 {% extends 'partials/lib_template.html.twig' %}
 
-{% block collections %}
+{% block collection %}
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
     {% if material_items.count > 0 %}
         <h3>Library items made with this material</h3>
