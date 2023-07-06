@@ -15,7 +15,7 @@ Variables:
             {% set child_header = child.header.processes %}
         {% endif %}
         {% if page.route in child_header %}
-        <li class="column col-xs-2 col-md-3 col-lg-4 col-mr-auto">
+        <li class="column col-3 col-sm-6 col-md-4 col-mr-auto">
             {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
         {# <a href="{{ i.url|e }}">{{ i.header.title|e }}</a> #}
         </li>
@@ -25,7 +25,7 @@ Variables:
     {% for link in link_list %}
         {% set referencePage = grav.page.find(link) %}
         {% if referencePage %}
-            <li class="column col-xs-2 col-md-3 col-lg-4 col-mr-auto">
+            <li class="column col-3 col-sm-6 col-md-4 col-mr-auto">
             {#<a href="{{ link|e }}">{{ referencePage.header.title|e }}</a>#}
             {% include 'partials/blog-list-item.html.twig' with {blog: page, page: referencePage} %}
             </li>

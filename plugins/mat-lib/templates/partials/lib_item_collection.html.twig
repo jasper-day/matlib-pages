@@ -1,4 +1,4 @@
-{% set materials = page.header.materials|e %}
+{% set materials = page.header.material_type|e %}
 {% if materials %}
     <h3>Materials making up this item</h3>
     {% include('partials/lib_related_items.html.twig') with {link_list: materials} %}
