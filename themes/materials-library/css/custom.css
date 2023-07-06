@@ -4,6 +4,11 @@
     padding: 3rem 1rem;
 }
 
+.hero {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
 
 .padding-top {
     padding-top: 10rem;
