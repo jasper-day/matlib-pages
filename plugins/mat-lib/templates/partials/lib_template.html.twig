@@ -2,6 +2,10 @@
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 
+{% block lib_def %}
+    {% set lib_collection = Null %}
+{% endblock %}
+
 <div class="wrapper padding padding-around">
     {% embed 'partials/layout.html.twig' with {blog: page} %}
         {% block item %}
@@ -20,6 +24,13 @@
                     {% endblock %}
 
                     {% block collections %}
+                        {% if lib_collection == 'material_collection' %}
+                            {% include('partials/lib_material_collection.html.  twig') %}
+                        {% elseif lib_collection == 'item_collection' %}
+                            {% include('partials/lib_item_collection.html.twig') %}
+                        {% elseif lib_collection == 'process_collection' %}
+                            {% include('partials/lib_process_collection.html.twig') %}
+                        {% endif %}
                     {% endblock %}
                 </div>
             </section>

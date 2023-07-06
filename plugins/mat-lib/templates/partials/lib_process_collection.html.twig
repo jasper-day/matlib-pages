@@ -1,0 +1,5 @@
+{% set material_processes = page.collection({'items': {'@page.children': '/materials'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
+{% if material_processes.count > 0 %}
+    <h3>Materials formed with this process</h3>
+{% include('partials/lib_related_items.html.twig') with {collection: material_processes, header_var: 'process', route: page.route} %}
+{% endif %}
