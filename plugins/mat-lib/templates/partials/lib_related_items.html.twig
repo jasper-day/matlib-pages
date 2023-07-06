@@ -1,7 +1,6 @@
 {# Simple collection template that works with either a list of links or a collection.
 Variables: 
     - collection (a collection of pages) 
-    - route: route to the parent page
     - header_var: the header variable to check for the route
     - link_list: list of links (should only be set if collection is not set)
     
@@ -15,7 +14,7 @@ Variables:
         {% elseif header_var == 'process' %}
             {% set child_header = child.header.process %}
         {% endif %}
-        {% if route in child_header %}
+        {% if page.route in child_header %}
         <li class="column col-xs-4 col-md-3 col-lg-1 col-mr-auto">
             {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
         {# <a href="{{ i.url|e }}">{{ i.header.title|e }}</a> #}

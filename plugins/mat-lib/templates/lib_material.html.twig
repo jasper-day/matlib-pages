@@ -1,8 +1,4 @@
-{% extends 'partials/base.html.twig' %}
-
-{% block lib_material %}
-
-{% embed 'partials/lib_template.html.twig' %}
+{% extends 'partials/lib_template.html.twig' %}
 
 {% block collections %}
     {% set material_items = page.collection({'items': {'@page.children': '/items'}, 'order': {'by': 'header.title', 'dir': 'asc'}}) %}
@@ -16,8 +12,4 @@
         <h3>Processes used on this material</h3>
         {% include('partials/lib_related_items.html.twig') with {link_list: processType} %}
     {% endif %}
-{% endblock %}
-
-{% endembed %}
-
 {% endblock %}
