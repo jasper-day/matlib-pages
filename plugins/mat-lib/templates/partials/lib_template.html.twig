@@ -1,12 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
-{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 
 {% block lib_def %}
+    {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+    {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
     {% set lib_collection = Null %}
 {% endblock %}
 
+{% block body %}
 <div class="wrapper padding padding-around">
     {% embed 'partials/layout.html.twig' with {blog: page} %}
         {% block item %}
@@ -43,3 +44,4 @@
         {% endblock %}
     {% endembed %}
 </div>
+{% endblock %}
