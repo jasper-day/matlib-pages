@@ -9,8 +9,8 @@
         {% block item %}
             <section id="body">
                 <div class="wrapper padding">
+                    {% include('partials/lib_content.html.twig')%}
                     
-
                     {% block collections %}
                         {% include('partials/lib_process_collection.html.twig') %}
                     {% endblock %}
