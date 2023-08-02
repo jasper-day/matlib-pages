@@ -4,15 +4,6 @@ title: MatLib
 
 Hello! This is the home page of the [University of Edinburgh](https://www.ed.ac.uk) Materials Library.
 
-Currently in progress.
+To see the collection, head over to [items](/items). Check out the [classifications](/classifications) tab to see more information about the different items and materials in the library!
 
-## TODO:
-
-- [x] Write form to create new item and material pages
-- [x] Write php to enable cross linking in said form:
- 	- [x] The item page should allow you to select from a list of created materials, the material page should allow you to select from a list of processes, etc
-- [ ] Bring in JSmol library and asset stream to embed JSmol
-- [ ] Figure out 3D viewer
-- [ ] Theming and Scheming
-
-## Hello from the Git repo!
+If you're taking over this repository, check out the [documentation](/documentation).
