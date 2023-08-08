@@ -2,15 +2,15 @@
 title: bike fork
 tags: [bike]
 images:
-- link: bike_fork.jpg
+- link: bike-fork.jpg
   caption: One leg of the bike fork
-- link: bike_fork_1.jpg
+- link: bike-fork-1.jpg
   caption: The cut end of the bike fork
-- link: bike_fork_2.jpg
+- link: bike-fork-2.jpg
   caption: The end of the fork that holds the axle, showing marks from a nut
-- link: bike_fork_3.jpg
+- link: bike-fork-3.jpg
   caption: The Aprebic logo on the bike stem
-- link: bike_fork_4.jpg
+- link: bike-fork-4.jpg
   caption: The welded assembly which holds the legs of the fork
 materials:
 - name: Aluminum

@@ -2,9 +2,9 @@
 title: broken carabiner
 tags: [failure, climbing, carabiner]
 images: 
-- link: broken_carabiner.jpg
+- link: broken-carabiner.jpg
   caption: The broken carabiner
-- link: broken_carabiner_1.jpg
+- link: broken-carabiner-1.jpg
   caption: Close up of the broken face
 materials:
 - name: Aluminum

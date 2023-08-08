@@ -1,15 +1,15 @@
 ---
 title: Broken Pipe
 images:
-- link: broken_pipe.jpg
+- link: broken-pipe.jpg
   caption: Top view of a broken pipe
-- link: broken_pipe_1.jpg
+- link: broken-pipe-1.jpg
   caption: Side view of broken pipe showing internal corrosion
-- link: broken_pipe_2.jpg
+- link: broken-pipe-2.jpg
   caption: Heavily corroded underside of the pipe
-- link: broken_pipe_3.jpg
+- link: broken-pipe-3.jpg
   caption: Side of the pipe, showing deformation
-- link: broken_pipe_4.jpg
+- link: broken-pipe-4.jpg
   caption: Pipe burst due to ice
 materials:
 - name: Copper

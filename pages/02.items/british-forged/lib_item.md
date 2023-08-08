@@ -2,13 +2,13 @@
 title: british forged
 tags: [damaged]
 images:
-- link: british_forged.jpg
+- link: british-forged.jpg
   caption: Close up of the cut end showing scratches
-- link: british_forged_1.jpg
+- link: british-forged-1.jpg
   caption: The whole item
-- link: british_forged_2.jpg
+- link: british-forged-2.jpg
   caption: Close up of 'British Forged' logo
-- link: british_forged_3.jpg
+- link: british-forged-3.jpg
   caption: close up of the crank end
 materials:
 - name: Unknown

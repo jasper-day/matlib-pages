@@ -3,13 +3,13 @@ title: carabiner
 images:
 - link: carabiner.jpg
   caption: A red carabiner. Heavily scratched
-- link: carabiners_forge.jpg
+- link: carabiners-forge.jpg
   caption: Carabiners at various stages in the manufacture process.
-- link: carabiners_forge_1.jpg
+- link: carabiners-forge-1.jpg
   caption: The carabiner, nearly finished.
-- link: carabiners_forge_2.jpg
+- link: carabiners-forge-2.jpg
   caption: Hot forged into place, with flashing around the edges.
-- link: carabiners_forge_3.jpg
+- link: carabiners-forge-3.jpg
   caption: A carabiner blank.
 materials:
 - name: Aluminum

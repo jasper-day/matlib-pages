@@ -1,7 +1,7 @@
 ---
 title: Coca-Cola Can
 images:
-- link: coca_cola.jpg
+- link: coca-cola.jpg
   caption: Front view of the can, showing the Coca-Cola logo
 materials:
 - name: Aluminum 3004

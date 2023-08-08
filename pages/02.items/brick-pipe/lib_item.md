@@ -2,7 +2,7 @@
 title: Brick Pipe
 tags: [common]
 images:
-- link: brick_pipe.jpg
+- link: brick-pipe.jpg
   caption: A section of brick pipe.
 materials:
 - name: Brick

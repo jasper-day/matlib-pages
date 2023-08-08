@@ -2,9 +2,9 @@
 title: Copper Tension Specimen
 tags: [test, failure]
 images:
-- link: copper_tension.jpg
+- link: copper-tension.jpg
   caption: Front view of the broken tension specimen
-- link: copper_tension_1.jpg
+- link: copper-tension-1.jpg
   caption: Bottom view showing the far face
 materials:
 - name: Copper

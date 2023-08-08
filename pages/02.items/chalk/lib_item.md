@@ -4,7 +4,7 @@ tags: [common]
 images:
 - link: chalk.jpg
   caption: The pieces of chalk laid out in a line, showing off their faces
-- link: chalk_1.jpg
+- link: chalk-1.jpg
   caption: Top down view of the chalk
 materials:
 - name: Chalk

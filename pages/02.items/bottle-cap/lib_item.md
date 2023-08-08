@@ -2,9 +2,9 @@
 title: Bottle Cap
 tags: [common, food]
 images:
-- link: bottle_cap.jpg
+- link: bottle-cap.jpg
   caption: Top view of the bottle cap
-- link: bottle_cap_1.jpg
+- link: bottle-cap-1.jpg
   caption: Bottom view of the bottle cap
 materials:
 - name: Unknown

@@ -2,11 +2,11 @@
 title: Closed Cell Aluminum Foam
 tags: [foam, closed cell, lightweight]
 images:
-- link: cc_al_foam.jpg
+- link: cc-al-foam.jpg
   caption: Top view of the aluminum foam
-- link: cc_al_foam_1.jpg
+- link: cc-al-foam-1.jpg
   caption: Corner view
-- link: cc_al_foam_2.jpg
+- link: cc-al-foam-2.jpg
   caption: Side view showing the interior of the cells
 materials:
 - name: Aluminum

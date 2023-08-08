@@ -1,9 +1,9 @@
 ---
 title: fiber honeycomb sandwich
 images:
-- link: fiber_honeycomb_sandwich.jpg
+- link: fiber-honeycomb-sandwich.jpg
   caption: A side view of the honeycomb sandwich, showing off the structure of the honeycomb
-- link: fiber_honeycomb_sandwich_1.jpg
+- link: fiber-honeycomb-sandwich-1.jpg
   caption: Technical Resin Bonders info card 
 materials:
 - name: Aluminum Honeycomb

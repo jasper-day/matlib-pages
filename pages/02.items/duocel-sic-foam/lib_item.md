@@ -3,7 +3,7 @@ title: Duocel Silicon Carbide Foam
 donor: Duocel
 tags: [foam, hard, lightweight, open cell]
 images:
-- link: duocel_SiC_foam.jpg
+- link: duocel-SiC-foam.jpg
   caption: A silicon carbide foam.
 materials:
 - name: Silicon Carbide

@@ -2,11 +2,11 @@
 title: Acrylic Tube
 tags: [tube]
 images:
-- link: acrylic_tube.jpg
+- link: acrylic-tube.jpg
   caption: The acrylic tube.
-- link: acrylic_tube_1.jpg
+- link: acrylic-tube-1.jpg
   caption: Viewed from the front
-- link: acrylic_tube_2.jpg
+- link: acrylic-tube-2.jpg
   caption: ...And head on
 materials:
 - name: Acrylic (PMMA)

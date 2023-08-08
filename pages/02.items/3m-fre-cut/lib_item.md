@@ -4,11 +4,11 @@ donor: 3M
 external-link: https://www.3m.com/3M/en_US/p/d/b40064960/
 tags: [aluminum oxide, sanding, tools]
 images:
-- link: 3M_fre_cut.jpg
+- link: 3M-fre-cut.jpg
   caption: A 3M Sanding Disc
-- link: 3M_fre_cut_1.jpg
+- link: 3M-fre-cut-1.jpg
   caption: Close up of the backing texture
-- link: 3M_fre_cut_2.jpg
+- link: 3M-fre-cut-2.jpg
   caption: The disc from the back
 materials:
 - name: Corundum (Aluminum Oxide)

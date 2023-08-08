@@ -2,7 +2,7 @@
 title: Brass Tension
 tags: [test, failure]
 images:
-- link: brass_tension.jpg
+- link: brass-tension.jpg
   caption: Front view of the tensile test specimen
 material:
 - name: Brass

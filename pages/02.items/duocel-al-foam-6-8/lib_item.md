@@ -3,7 +3,7 @@ title: Duocel Aluminum foam
 tags: [foam, lightweight, open cell, aerospace]
 donor: Duocel
 images:
-- link: duocel_al_foam_6-8.jpg
+- link: duocel-al-foam-6-8.jpg
   caption: Duocel Aluminum Foam Metal, 6-8% density, 6101 alloy
 materials:
 - name: Aluminum 6061
