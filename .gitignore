@@ -1,5 +1,7 @@
 accounts/*
 accounts/
+pages/02.items/tmp/*
+pages/02.items/tmp
 themes/materials-library/node_modules/.package-lock.json
 themes/materials-library/node_modules/.bin/acorn
 themes/materials-library/node_modules/.bin/atob
