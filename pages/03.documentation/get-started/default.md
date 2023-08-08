@@ -25,4 +25,4 @@ What can we say about the items? Well, since the project is run by materials pro
 
 TODO ![Box chart: Item -> Materials]()
 
-Note that an item might be made of a single material (e.g. a rubber band), or made of multiple materials. If the item is made of multiple materials, all of those materials will be listed separately. A good example of this is the 
+Note that an item might be made of a single material (e.g. a rubber band), or made of multiple materials. If the item is made of multiple materials, all of those materials will be listed separately.

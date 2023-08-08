@@ -6,5 +6,5 @@ content:
         dir: desc
     limit: 25
     pagination: true
-title: Items
+title: Documentation
 ---
