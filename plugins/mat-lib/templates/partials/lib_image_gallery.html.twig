@@ -1,10 +1,9 @@
 <div class="container">
     <div class="columns">
-        {% for imagedata in page.header.images %}
-        {% set  image = page.media[imagedata.name] %}
+        {% for image in page.media.images %}
         <div class="column col-12">
             {{ image.lightbox(1024,768).cropresize(200,200).html("", "View Image", "img-fit-contain")|raw }}       <figure class="figure">
-            <figcaption class="figure-caption text-center">{{ imagedata.caption|e }}</figcaption>
+            <figcaption class="figure-caption text-center">{{ image.caption|e }}</figcaption>
         </figure>
         </div>
         {% endfor %}

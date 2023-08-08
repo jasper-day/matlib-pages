@@ -2,11 +2,6 @@
 title: Aluminum Honeycomb Sandwich
 tags: [lightweight, aerospace, honeycomb, bonded]
 donor: 
-images:
-- link: aluminum-honeycomb-sandwich.jpg
-  caption: The panel viewed from above
-- link: aluminum-honeycomb-sandwich.jpg
-  caption: The panel viewed from the side, showing how it damages
 materials:
 - name: Aluminum Honeycomb
   category: [metals, aluminum]

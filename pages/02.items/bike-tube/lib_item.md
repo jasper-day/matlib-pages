@@ -1,13 +1,6 @@
 ---
 title: Inner Tube
 tags: [bike, elastic]
-images:
-- link: bike-tube.jpg
-  caption: The inner tube laid out
-- link: bike-tube-1.jpg
-  caption: A close up of the cut end
-- link: bike-tube-2.jpg
-  caption: Close up of the Presta valve
 materials:
 - name: Butyl Rubber
   wikipedia: https://en.wikipedia.org/wiki/Butyl_rubber

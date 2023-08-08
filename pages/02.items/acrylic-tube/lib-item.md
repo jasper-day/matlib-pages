@@ -1,13 +1,6 @@
 ---
 title: Acrylic Tube
 tags: [tube]
-images:
-- link: acrylic-tube.jpg
-  caption: The acrylic tube.
-- link: acrylic-tube-1.jpg
-  caption: Viewed from the front
-- link: acrylic-tube-2.jpg
-  caption: ...And head on
 materials:
 - name: Acrylic (PMMA)
   formula: (C5H8O2)n
